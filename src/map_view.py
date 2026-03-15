@@ -17,7 +17,7 @@ import folium
 from extractor import extract_all
 
 def sort_by_time(arr):
-    pass
+    return sorted(arr, key=lambda x: x['datetime'])
 
 
 def create_map(images_data):
@@ -39,11 +39,11 @@ def create_map(images_data):
     center_lon = sum(img["longitude"] for img in gps_images) / len(gps_images)
 
     m = folium.Map(location=[center_lat, center_lon], zoom_start=8)
-    gps_images.sort(key=lambda x: x['datetime'])
+    gps_images = sort_by_time(gps_images)
     path_coords = [(img["latitude"], img["longitude"]) for img in gps_images]
     colors = ["blue","green","red","black","gray","purple"]
     dict_color_for_camera = {}
-    for img in gps_images:
+    for i, img in enumerate(gps_images):
         if colors == []:
             colors = ["blue", "green", "red", "black", "gray", "purple","orange","lightgray","white","lightblue"]
 
@@ -56,7 +56,7 @@ def create_map(images_data):
             location=[img["latitude"], img["longitude"]],
             popup=folium.Popup(
                 f"<b>📷{img['filename']}</b><br>"
-                f"Photo #: {gps_images.index(img) + 1}<br>"
+                 f"Photo #: {i + 1}<br>"
                 f"Time: {img['datetime']}<br>"
                 f"Device:{img.get('camera_model', '')}".strip() + "<br>"
                 f"Coordinates:<br>{img['latitude']:.6f}, {img['longitude']:.6f}",

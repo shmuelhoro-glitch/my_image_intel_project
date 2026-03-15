@@ -52,7 +52,7 @@ def _detect_time_gaps(sorted_images: list, threshold_hours: float = 6) -> list:
         if t1 and t2:
             diff_hours = (t2 - t1).total_seconds() / 3600
             if diff_hours >= threshold_hours:
-                gaps.append({"after_index": i, "hours": round(diff_hours, 1)})
+                gaps.append({"after_index": i - 1, "hours": round(diff_hours, 1)})
     return gaps
 
 # ──────────────────────────────────────────

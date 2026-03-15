@@ -1,15 +1,18 @@
-#analyzer gpt
 from collections import Counter
 from geopy.geocoders import Nominatim
 from geopy.extra.rate_limiter import RateLimiter
+from functools import lru_cache
 
 geolocator = Nominatim(user_agent="image_intel_system")
 reverse = RateLimiter(geolocator.reverse, min_delay_seconds=1)
 
 
+@lru_cache(maxsize=512)
 def get_city_offline(lat, lon):
+    lat = round(lat, 3)
+    lon = round(lon, 3)
     try:
-        location = geolocator.reverse((lat, lon), language="he", timeout=10)
+        location = reverse((lat, lon), language="he")
         if location:
             address = location.raw.get("address", {})
             return (
