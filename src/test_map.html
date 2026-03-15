@@ -1,0 +1,563 @@
+<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -> Trust Notebook</span><iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    
+    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css&quot;/&gt;
+    
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
+            &lt;style&gt;
+                #map_7e3fb1f25c98063bae00a5552b827b7a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            &lt;/style&gt;
+
+            &lt;style&gt;html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            &lt;/style&gt;
+
+            &lt;style&gt;#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            &lt;/style&gt;
+
+            &lt;script&gt;
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            &lt;/script&gt;
+
+        
+&lt;/head&gt;
+&lt;body&gt;
+    
+    
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_7e3fb1f25c98063bae00a5552b827b7a&quot; &gt;&lt;/div&gt;
+        
+&lt;/body&gt;
+&lt;script&gt;
+    
+    
+            var map_7e3fb1f25c98063bae00a5552b827b7a = L.map(
+                &quot;map_7e3fb1f25c98063bae00a5552b827b7a&quot;,
+                {
+                    center: [31.564191666666662, 34.95635],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  &quot;zoom&quot;: 8,
+  &quot;zoomControl&quot;: true,
+  &quot;preferCanvas&quot;: false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_dc297f52bdfbeb357f91571fc519b9a0 = L.tileLayer(
+                &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
+                {
+  &quot;minZoom&quot;: 0,
+  &quot;maxZoom&quot;: 19,
+  &quot;maxNativeZoom&quot;: 19,
+  &quot;noWrap&quot;: false,
+  &quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;,
+  &quot;subdomains&quot;: &quot;abc&quot;,
+  &quot;detectRetina&quot;: false,
+  &quot;tms&quot;: false,
+  &quot;opacity&quot;: 1,
+}
+
+            );
+        
+    
+            tile_layer_dc297f52bdfbeb357f91571fc519b9a0.addTo(map_7e3fb1f25c98063bae00a5552b827b7a);
+        
+    
+            var marker_c2b26bf48dff943dc84731061b9b8e58 = L.marker(
+                [32.0853, 34.7818],
+                {
+}
+            ).addTo(map_7e3fb1f25c98063bae00a5552b827b7a);
+        
+    
+            var icon_d305b2b8568d7b71f9818b062192f7c6 = L.AwesomeMarkers.icon(
+                {
+  &quot;markerColor&quot;: &quot;blue&quot;,
+  &quot;iconColor&quot;: &quot;white&quot;,
+  &quot;icon&quot;: &quot;camera&quot;,
+  &quot;prefix&quot;: &quot;glyphicon&quot;,
+  &quot;extraClasses&quot;: &quot;fa-rotate-0&quot;,
+}
+            );
+        
+    
+        var popup_21fac1d7185cfd739dc29da1ea7b1b41 = L.popup({
+  &quot;maxWidth&quot;: 200,
+});
+
+        
+            
+                var html_20d075da88ca79929319678bb3877649 = $(`&lt;div id=&quot;html_20d075da88ca79929319678bb3877649&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;📷IMG_001.jpg&lt;/b&gt;&lt;br&gt;Photo #: 1&lt;br&gt;Time: 2025-01-12 08:30:00&lt;br&gt;Device:Galaxy S23&lt;br&gt;&lt;/div&gt;`)[0];
+                popup_21fac1d7185cfd739dc29da1ea7b1b41.setContent(html_20d075da88ca79929319678bb3877649);
+            
+        
+
+        marker_c2b26bf48dff943dc84731061b9b8e58.bindPopup(popup_21fac1d7185cfd739dc29da1ea7b1b41)
+        ;
+
+        
+    
+    
+                marker_c2b26bf48dff943dc84731061b9b8e58.setIcon(icon_d305b2b8568d7b71f9818b062192f7c6);
+            
+    
+            var marker_9246ba810d9786290d66d7b6e5a2d705 = L.marker(
+                [32.0804, 34.7805],
+                {
+}
+            ).addTo(map_7e3fb1f25c98063bae00a5552b827b7a);
+        
+    
+            var icon_ac42011318e1d6e81a0233239c58af16 = L.AwesomeMarkers.icon(
+                {
+  &quot;markerColor&quot;: &quot;blue&quot;,
+  &quot;iconColor&quot;: &quot;white&quot;,
+  &quot;icon&quot;: &quot;camera&quot;,
+  &quot;prefix&quot;: &quot;glyphicon&quot;,
+  &quot;extraClasses&quot;: &quot;fa-rotate-0&quot;,
+}
+            );
+        
+    
+        var popup_aa327027dffb50e55595ef15795246bd = L.popup({
+  &quot;maxWidth&quot;: 200,
+});
+
+        
+            
+                var html_1b163f657faa6d97bb592a978810dcff = $(`&lt;div id=&quot;html_1b163f657faa6d97bb592a978810dcff&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;📷IMG_002.jpg&lt;/b&gt;&lt;br&gt;Photo #: 2&lt;br&gt;Time: 2025-01-12 11:15:00&lt;br&gt;Device:Galaxy S23&lt;br&gt;&lt;/div&gt;`)[0];
+                popup_aa327027dffb50e55595ef15795246bd.setContent(html_1b163f657faa6d97bb592a978810dcff);
+            
+        
+
+        marker_9246ba810d9786290d66d7b6e5a2d705.bindPopup(popup_aa327027dffb50e55595ef15795246bd)
+        ;
+
+        
+    
+    
+                marker_9246ba810d9786290d66d7b6e5a2d705.setIcon(icon_ac42011318e1d6e81a0233239c58af16);
+            
+    
+            var marker_4804d417f626fe48b6afb975cd353b0f = L.marker(
+                [32.0667, 34.7667],
+                {
+}
+            ).addTo(map_7e3fb1f25c98063bae00a5552b827b7a);
+        
+    
+            var icon_6a5b3300a09616d66e1777b9a4ff03d4 = L.AwesomeMarkers.icon(
+                {
+  &quot;markerColor&quot;: &quot;blue&quot;,
+  &quot;iconColor&quot;: &quot;white&quot;,
+  &quot;icon&quot;: &quot;camera&quot;,
+  &quot;prefix&quot;: &quot;glyphicon&quot;,
+  &quot;extraClasses&quot;: &quot;fa-rotate-0&quot;,
+}
+            );
+        
+    
+        var popup_2eace25940526b1a17a38d61f501450f = L.popup({
+  &quot;maxWidth&quot;: 200,
+});
+
+        
+            
+                var html_f885f6bfe80560a2e55cb061d6269323 = $(`&lt;div id=&quot;html_f885f6bfe80560a2e55cb061d6269323&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;📷IMG_003.jpg&lt;/b&gt;&lt;br&gt;Photo #: 3&lt;br&gt;Time: 2025-01-12 14:00:00&lt;br&gt;Device:Galaxy S23&lt;br&gt;&lt;/div&gt;`)[0];
+                popup_2eace25940526b1a17a38d61f501450f.setContent(html_f885f6bfe80560a2e55cb061d6269323);
+            
+        
+
+        marker_4804d417f626fe48b6afb975cd353b0f.bindPopup(popup_2eace25940526b1a17a38d61f501450f)
+        ;
+
+        
+    
+    
+                marker_4804d417f626fe48b6afb975cd353b0f.setIcon(icon_6a5b3300a09616d66e1777b9a4ff03d4);
+            
+    
+            var marker_fe1c6acfccd05d21fcd5fb7b64cb2b56 = L.marker(
+                [31.7683, 35.2137],
+                {
+}
+            ).addTo(map_7e3fb1f25c98063bae00a5552b827b7a);
+        
+    
+            var icon_1077ee1ca8d44e65f36f98cf52b123d7 = L.AwesomeMarkers.icon(
+                {
+  &quot;markerColor&quot;: &quot;green&quot;,
+  &quot;iconColor&quot;: &quot;white&quot;,
+  &quot;icon&quot;: &quot;camera&quot;,
+  &quot;prefix&quot;: &quot;glyphicon&quot;,
+  &quot;extraClasses&quot;: &quot;fa-rotate-0&quot;,
+}
+            );
+        
+    
+        var popup_22dc9a7c0770b264c4576fc7f5095cc2 = L.popup({
+  &quot;maxWidth&quot;: 200,
+});
+
+        
+            
+                var html_a4e807e79141d39de58f001957eecfd0 = $(`&lt;div id=&quot;html_a4e807e79141d39de58f001957eecfd0&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;📷IMG_004.jpg&lt;/b&gt;&lt;br&gt;Photo #: 4&lt;br&gt;Time: 2025-01-13 09:00:00&lt;br&gt;Device:iPhone 15 Pro&lt;br&gt;&lt;/div&gt;`)[0];
+                popup_22dc9a7c0770b264c4576fc7f5095cc2.setContent(html_a4e807e79141d39de58f001957eecfd0);
+            
+        
+
+        marker_fe1c6acfccd05d21fcd5fb7b64cb2b56.bindPopup(popup_22dc9a7c0770b264c4576fc7f5095cc2)
+        ;
+
+        
+    
+    
+                marker_fe1c6acfccd05d21fcd5fb7b64cb2b56.setIcon(icon_1077ee1ca8d44e65f36f98cf52b123d7);
+            
+    
+            var marker_9abd965859931e9a1c762a069707539b = L.marker(
+                [31.778, 35.2354],
+                {
+}
+            ).addTo(map_7e3fb1f25c98063bae00a5552b827b7a);
+        
+    
+            var icon_2123e1d67476db2cdcc79d2353f2bdb8 = L.AwesomeMarkers.icon(
+                {
+  &quot;markerColor&quot;: &quot;green&quot;,
+  &quot;iconColor&quot;: &quot;white&quot;,
+  &quot;icon&quot;: &quot;camera&quot;,
+  &quot;prefix&quot;: &quot;glyphicon&quot;,
+  &quot;extraClasses&quot;: &quot;fa-rotate-0&quot;,
+}
+            );
+        
+    
+        var popup_12084a71a5826f97efc0a5c7322a131a = L.popup({
+  &quot;maxWidth&quot;: 200,
+});
+
+        
+            
+                var html_6ec8fb15cd31f8f9f440360732976600 = $(`&lt;div id=&quot;html_6ec8fb15cd31f8f9f440360732976600&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;📷IMG_005.jpg&lt;/b&gt;&lt;br&gt;Photo #: 5&lt;br&gt;Time: 2025-01-13 12:30:00&lt;br&gt;Device:iPhone 15 Pro&lt;br&gt;&lt;/div&gt;`)[0];
+                popup_12084a71a5826f97efc0a5c7322a131a.setContent(html_6ec8fb15cd31f8f9f440360732976600);
+            
+        
+
+        marker_9abd965859931e9a1c762a069707539b.bindPopup(popup_12084a71a5826f97efc0a5c7322a131a)
+        ;
+
+        
+    
+    
+                marker_9abd965859931e9a1c762a069707539b.setIcon(icon_2123e1d67476db2cdcc79d2353f2bdb8);
+            
+    
+            var marker_dba986402b4de8b82f84279a936248a6 = L.marker(
+                [31.7742, 35.2258],
+                {
+}
+            ).addTo(map_7e3fb1f25c98063bae00a5552b827b7a);
+        
+    
+            var icon_9e5fbfbbded0bd63ca4f37a6ab29d9c3 = L.AwesomeMarkers.icon(
+                {
+  &quot;markerColor&quot;: &quot;green&quot;,
+  &quot;iconColor&quot;: &quot;white&quot;,
+  &quot;icon&quot;: &quot;camera&quot;,
+  &quot;prefix&quot;: &quot;glyphicon&quot;,
+  &quot;extraClasses&quot;: &quot;fa-rotate-0&quot;,
+}
+            );
+        
+    
+        var popup_7758c742c2de390e2b37864e34062dd8 = L.popup({
+  &quot;maxWidth&quot;: 200,
+});
+
+        
+            
+                var html_43934f321223ced0d3d627f46bdd9350 = $(`&lt;div id=&quot;html_43934f321223ced0d3d627f46bdd9350&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;📷IMG_006.jpg&lt;/b&gt;&lt;br&gt;Photo #: 6&lt;br&gt;Time: 2025-01-13 16:45:00&lt;br&gt;Device:iPhone 15 Pro&lt;br&gt;&lt;/div&gt;`)[0];
+                popup_7758c742c2de390e2b37864e34062dd8.setContent(html_43934f321223ced0d3d627f46bdd9350);
+            
+        
+
+        marker_dba986402b4de8b82f84279a936248a6.bindPopup(popup_7758c742c2de390e2b37864e34062dd8)
+        ;
+
+        
+    
+    
+                marker_dba986402b4de8b82f84279a936248a6.setIcon(icon_9e5fbfbbded0bd63ca4f37a6ab29d9c3);
+            
+    
+            var marker_59023f37d8ec2c3c0346eb13b5d0a57b = L.marker(
+                [32.794, 34.9896],
+                {
+}
+            ).addTo(map_7e3fb1f25c98063bae00a5552b827b7a);
+        
+    
+            var icon_40e844a24913621fe7f4cbf9555cedb8 = L.AwesomeMarkers.icon(
+                {
+  &quot;markerColor&quot;: &quot;green&quot;,
+  &quot;iconColor&quot;: &quot;white&quot;,
+  &quot;icon&quot;: &quot;camera&quot;,
+  &quot;prefix&quot;: &quot;glyphicon&quot;,
+  &quot;extraClasses&quot;: &quot;fa-rotate-0&quot;,
+}
+            );
+        
+    
+        var popup_ea6906c6e854c41588a19df8330edb44 = L.popup({
+  &quot;maxWidth&quot;: 200,
+});
+
+        
+            
+                var html_1432948413813cfdb6ec596c627022ce = $(`&lt;div id=&quot;html_1432948413813cfdb6ec596c627022ce&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;📷IMG_007.jpg&lt;/b&gt;&lt;br&gt;Photo #: 7&lt;br&gt;Time: 2025-01-14 10:00:00&lt;br&gt;Device:iPhone 15 Pro&lt;br&gt;&lt;/div&gt;`)[0];
+                popup_ea6906c6e854c41588a19df8330edb44.setContent(html_1432948413813cfdb6ec596c627022ce);
+            
+        
+
+        marker_59023f37d8ec2c3c0346eb13b5d0a57b.bindPopup(popup_ea6906c6e854c41588a19df8330edb44)
+        ;
+
+        
+    
+    
+                marker_59023f37d8ec2c3c0346eb13b5d0a57b.setIcon(icon_40e844a24913621fe7f4cbf9555cedb8);
+            
+    
+            var marker_2a43dea8d7c68b55b98a42d217c1350f = L.marker(
+                [32.8115, 34.9986],
+                {
+}
+            ).addTo(map_7e3fb1f25c98063bae00a5552b827b7a);
+        
+    
+            var icon_19691f7d33f2f5a50ab262da67080c58 = L.AwesomeMarkers.icon(
+                {
+  &quot;markerColor&quot;: &quot;red&quot;,
+  &quot;iconColor&quot;: &quot;white&quot;,
+  &quot;icon&quot;: &quot;camera&quot;,
+  &quot;prefix&quot;: &quot;glyphicon&quot;,
+  &quot;extraClasses&quot;: &quot;fa-rotate-0&quot;,
+}
+            );
+        
+    
+        var popup_3459e378c0252a581d2c722bbbb290e4 = L.popup({
+  &quot;maxWidth&quot;: 200,
+});
+
+        
+            
+                var html_e360d4894d1166e00e717c7c7e0342a6 = $(`&lt;div id=&quot;html_e360d4894d1166e00e717c7c7e0342a6&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;📷IMG_008.jpg&lt;/b&gt;&lt;br&gt;Photo #: 8&lt;br&gt;Time: 2025-01-14 13:30:00&lt;br&gt;Device:EOS R5&lt;br&gt;&lt;/div&gt;`)[0];
+                popup_3459e378c0252a581d2c722bbbb290e4.setContent(html_e360d4894d1166e00e717c7c7e0342a6);
+            
+        
+
+        marker_2a43dea8d7c68b55b98a42d217c1350f.bindPopup(popup_3459e378c0252a581d2c722bbbb290e4)
+        ;
+
+        
+    
+    
+                marker_2a43dea8d7c68b55b98a42d217c1350f.setIcon(icon_19691f7d33f2f5a50ab262da67080c58);
+            
+    
+            var marker_922ddc16f105c3639ad97af9c6b3166f = L.marker(
+                [31.253, 34.7915],
+                {
+}
+            ).addTo(map_7e3fb1f25c98063bae00a5552b827b7a);
+        
+    
+            var icon_e4590060b204ad16e078560113b37af0 = L.AwesomeMarkers.icon(
+                {
+  &quot;markerColor&quot;: &quot;blue&quot;,
+  &quot;iconColor&quot;: &quot;white&quot;,
+  &quot;icon&quot;: &quot;camera&quot;,
+  &quot;prefix&quot;: &quot;glyphicon&quot;,
+  &quot;extraClasses&quot;: &quot;fa-rotate-0&quot;,
+}
+            );
+        
+    
+        var popup_eeae063828f623749a59613e236373bc = L.popup({
+  &quot;maxWidth&quot;: 200,
+});
+
+        
+            
+                var html_98caa083e492f5ff2468256c7683aa8b = $(`&lt;div id=&quot;html_98caa083e492f5ff2468256c7683aa8b&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;📷IMG_009.jpg&lt;/b&gt;&lt;br&gt;Photo #: 9&lt;br&gt;Time: 2025-01-15 09:30:00&lt;br&gt;Device:Galaxy S23&lt;br&gt;&lt;/div&gt;`)[0];
+                popup_eeae063828f623749a59613e236373bc.setContent(html_98caa083e492f5ff2468256c7683aa8b);
+            
+        
+
+        marker_922ddc16f105c3639ad97af9c6b3166f.bindPopup(popup_eeae063828f623749a59613e236373bc)
+        ;
+
+        
+    
+    
+                marker_922ddc16f105c3639ad97af9c6b3166f.setIcon(icon_e4590060b204ad16e078560113b37af0);
+            
+    
+            var marker_4ce821e6fa0c384977328fdebd1c8c49 = L.marker(
+                [31.262, 34.8013],
+                {
+}
+            ).addTo(map_7e3fb1f25c98063bae00a5552b827b7a);
+        
+    
+            var icon_532fb8479d6e0b89ff0db20244a67e4c = L.AwesomeMarkers.icon(
+                {
+  &quot;markerColor&quot;: &quot;blue&quot;,
+  &quot;iconColor&quot;: &quot;white&quot;,
+  &quot;icon&quot;: &quot;camera&quot;,
+  &quot;prefix&quot;: &quot;glyphicon&quot;,
+  &quot;extraClasses&quot;: &quot;fa-rotate-0&quot;,
+}
+            );
+        
+    
+        var popup_531989847a9e86895da115fa018d2642 = L.popup({
+  &quot;maxWidth&quot;: 200,
+});
+
+        
+            
+                var html_cd33fb7fe86fb6d99ae00b246e6f492d = $(`&lt;div id=&quot;html_cd33fb7fe86fb6d99ae00b246e6f492d&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;📷IMG_010.jpg&lt;/b&gt;&lt;br&gt;Photo #: 10&lt;br&gt;Time: 2025-01-15 14:00:00&lt;br&gt;Device:Galaxy S23&lt;br&gt;&lt;/div&gt;`)[0];
+                popup_531989847a9e86895da115fa018d2642.setContent(html_cd33fb7fe86fb6d99ae00b246e6f492d);
+            
+        
+
+        marker_4ce821e6fa0c384977328fdebd1c8c49.bindPopup(popup_531989847a9e86895da115fa018d2642)
+        ;
+
+        
+    
+    
+                marker_4ce821e6fa0c384977328fdebd1c8c49.setIcon(icon_532fb8479d6e0b89ff0db20244a67e4c);
+            
+    
+            var marker_d79853aa9e294943caf8bef6b5c87bc5 = L.marker(
+                [29.5569, 34.9498],
+                {
+}
+            ).addTo(map_7e3fb1f25c98063bae00a5552b827b7a);
+        
+    
+            var icon_3e14b55a655bb17700021a4e69172827 = L.AwesomeMarkers.icon(
+                {
+  &quot;markerColor&quot;: &quot;blue&quot;,
+  &quot;iconColor&quot;: &quot;white&quot;,
+  &quot;icon&quot;: &quot;camera&quot;,
+  &quot;prefix&quot;: &quot;glyphicon&quot;,
+  &quot;extraClasses&quot;: &quot;fa-rotate-0&quot;,
+}
+            );
+        
+    
+        var popup_8d1c75bd6736d6df0225774d25f2100b = L.popup({
+  &quot;maxWidth&quot;: 200,
+});
+
+        
+            
+                var html_de66ec3a46ea2f802e8126ab8dec5822 = $(`&lt;div id=&quot;html_de66ec3a46ea2f802e8126ab8dec5822&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;📷IMG_011.jpg&lt;/b&gt;&lt;br&gt;Photo #: 11&lt;br&gt;Time: 2025-01-16 11:00:00&lt;br&gt;Device:Galaxy S23&lt;br&gt;&lt;/div&gt;`)[0];
+                popup_8d1c75bd6736d6df0225774d25f2100b.setContent(html_de66ec3a46ea2f802e8126ab8dec5822);
+            
+        
+
+        marker_d79853aa9e294943caf8bef6b5c87bc5.bindPopup(popup_8d1c75bd6736d6df0225774d25f2100b)
+        ;
+
+        
+    
+    
+                marker_d79853aa9e294943caf8bef6b5c87bc5.setIcon(icon_3e14b55a655bb17700021a4e69172827);
+            
+    
+            var marker_6a1102decb34c7e6fc299d67202daf6d = L.marker(
+                [29.54, 34.9415],
+                {
+}
+            ).addTo(map_7e3fb1f25c98063bae00a5552b827b7a);
+        
+    
+            var icon_ae25ee245ec8fecc6140498addb053b3 = L.AwesomeMarkers.icon(
+                {
+  &quot;markerColor&quot;: &quot;green&quot;,
+  &quot;iconColor&quot;: &quot;white&quot;,
+  &quot;icon&quot;: &quot;camera&quot;,
+  &quot;prefix&quot;: &quot;glyphicon&quot;,
+  &quot;extraClasses&quot;: &quot;fa-rotate-0&quot;,
+}
+            );
+        
+    
+        var popup_c3bab98860785e4d0bf29edcaa086fc6 = L.popup({
+  &quot;maxWidth&quot;: 200,
+});
+
+        
+            
+                var html_50c0678316ca3f602bb935ccb0825048 = $(`&lt;div id=&quot;html_50c0678316ca3f602bb935ccb0825048&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;&lt;b&gt;📷IMG_012.jpg&lt;/b&gt;&lt;br&gt;Photo #: 12&lt;br&gt;Time: 2025-01-16 15:30:00&lt;br&gt;Device:iPhone 15 Pro&lt;br&gt;&lt;/div&gt;`)[0];
+                popup_c3bab98860785e4d0bf29edcaa086fc6.setContent(html_50c0678316ca3f602bb935ccb0825048);
+            
+        
+
+        marker_6a1102decb34c7e6fc299d67202daf6d.bindPopup(popup_c3bab98860785e4d0bf29edcaa086fc6)
+        ;
+
+        
+    
+    
+                marker_6a1102decb34c7e6fc299d67202daf6d.setIcon(icon_ae25ee245ec8fecc6140498addb053b3);
+            
+    
+            var poly_line_3738214e77a4cbaa2f2c67db3f67ab37 = L.polyline(
+                [[32.0853, 34.7818], [32.0804, 34.7805], [32.0667, 34.7667], [31.7683, 35.2137], [31.778, 35.2354], [31.7742, 35.2258], [32.794, 34.9896], [32.8115, 34.9986], [31.253, 34.7915], [31.262, 34.8013], [29.5569, 34.9498], [29.54, 34.9415]],
+                {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;blue&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: false, &quot;fillColor&quot;: &quot;blue&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;noClip&quot;: false, &quot;opacity&quot;: 0.7, &quot;smoothFactor&quot;: 1.0, &quot;stroke&quot;: true, &quot;weight&quot;: 3.5}
+            ).addTo(map_7e3fb1f25c98063bae00a5552b827b7a);
+        
+&lt;/script&gt;
+&lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div>
